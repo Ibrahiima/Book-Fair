@@ -1,0 +1,69 @@
+﻿@model Book
+
+<h1>Add New Book</h1>
+
+<style>
+    body {
+        background-color: #f8f9fa;
+    }
+
+    h1 {
+        color: #333;
+        text-align: center;
+        margin-top: 20px;
+    }
+
+    .form-group label {
+        color: #555;
+    }
+
+    .form-control {
+        border-color: #ccc;
+    }
+
+    .form-group {
+        margin-bottom: 20px;
+    }
+
+        /* Animation */
+        .form-group input,
+        .form-group select,
+        .btn-primary {
+            transition: all 0.3s ease-in-out;
+        }
+
+            .form-group input:focus,
+            .form-group select:focus,
+            .btn-primary:hover {
+                transform: scale(1.05);
+                box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+            }
+</style>
+
+<form method="post">
+
+    <div class="form-group">
+        <label for="Booktitle" class="form-label">Book title</label>
+        <input type="text" class="form-control" id="Booktitle" asp-for="Title">
+    </div>
+    <div class="form-group">
+        <label for="Booktype" class="form-label">Book Genre</label>
+        <input type="text" class="form-control" id="BookGenre" asp-for="GenreName">
+    </div>
+    <div class="form-group">
+        <label for="Booktype" class="form-label">Price:</label>
+        <input type="text" class="form-control" id="Price" asp-for="Price" />
+    </div>
+    <div class="form-group">
+        <label for="authorname" class="form-label">Page Count</label>
+        <input type="text" class="form-control" id="author" asp-for="PageCount">
+    </div>
+    <div class="form-group">
+        <label for="authorname" class="form-label">Author</label>
+        <input type="text" class="form-control" id="author" asp-for="Author.Name">
+    </div>
+    <button type="submit" class="btn btn-primary">Submit</button>
+</form>
+
+
+
